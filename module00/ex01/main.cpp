@@ -1,20 +1,19 @@
 #include <iostream>
 #include "user.class.hpp"
 
-int     main(int ac, char **av) {
+int     main(void) {
 
-    user    instance[8];
-    char    order[6];
-    int     index = 0;
-
-    (void)av;
-    if (ac > 1){
-        return 0;
-    }
+    user            instance[8];
+    std::string     order[6];
+    size_t          index = 0;
 
     while (true) {
-        std::cin >> order;
-        
+        std::getline(std::cin, order);
+        if (!order.compare("ADD")) {
+            if (index < 8) {
+                instance[index].add_contact
+            }
+        }       
     }
     return 0;
 }
