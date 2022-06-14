@@ -2,6 +2,7 @@
 # define  CONTACT_CLASS_H
 # include <string>
 # include <iostream>
+# include <iomanip>
 
 class Contact {
 
@@ -16,7 +17,8 @@ private:
 public:
 
     void            set_info(size_t index);
-    void            display_info(void) const;    
+    void            display_info(void) const;
+    void            display_search(void) const;    
 };
 
 #endif

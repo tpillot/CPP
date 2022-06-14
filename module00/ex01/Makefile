@@ -1,5 +1,5 @@
 # Name
-NAME = megaphone
+NAME = directory
 
 # Compiler
 CXX = clang++
@@ -7,17 +7,18 @@ CXX = clang++
 # Compiler Flags
 CXXFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.cpp\
-		user.class.cpp
-OBJS = main.o\
-		user.class.o
+SRCS += main.cpp\
+		Contact.class.cpp\
+		Directory.class.cpp
+
+OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
-$(OBJS) : $(SRCS)
+%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
