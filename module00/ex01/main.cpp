@@ -5,11 +5,12 @@ int     main(void) {
     Directory       directory;
     size_t          index = 0;
     std::string     order;
+    
 
     while (true) {
-        std::cout << "COMMAND : ";
+        std::cout << "COMMAND: ";
         std::getline(std::cin, order);
-        if (!order.compare("ADD")) {
+        if (!order.compare("ADD")) {    
             if (index == 8) {
                 index = 0;
             }
@@ -23,6 +24,6 @@ int     main(void) {
             break;
         }
     }
-    std::cout << "BYE !";
+    std::cout << "BYE !" << std::endl;
     return 0;
 }

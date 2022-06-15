@@ -26,19 +26,19 @@ void            Contact::set_info(size_t index) {
 
 void            Contact::display_info(void) const {
     
-    int     width;
+    int     len;
     
     std::cout << "|" << std::setw(10) << this->_index ;
     
     for (size_t i = 0; i < 3; i++) {
 
-        width = 10 - this->_info[i].size();
-        std::cout << width;
-        if (width < 0) {
+        len = this->_info[i].size();
+        // std::cout << width;
+        if (len > 10) {
             std::cout << "|" << this->_info[i].substr(0,9) << ".";
         }
         else {
-            std::cout << "|" << std::setw(width) << this->_info[i] ;
+            std::cout << "|" << std::setw(10) << this->_info[i];
         }
     }
     std::cout << "|" << std::endl;

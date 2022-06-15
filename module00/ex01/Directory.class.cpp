@@ -19,14 +19,14 @@ void    Directory::display_directory(void) const {
         return;
     }
 
-    std::cout << "|     index|first name| last name|  nicknam|" << std::endl;
+    std::cout << "|     index|first name| last name|   nicknam|" << std::endl;
     std::cout << "--------------------------------------------" << std::endl;
 
     for (size_t i = 0; i < this->_contact_len; i++) {
         this->_contact[i].display_info();
     }
 
-    std::cout << "Index :"; 
+    std::cout << "Index: "; 
     // std::getline(std::cin, index);
     std::cin >> index;
     if (index < 0 || index > 7) {
